@@ -1,7 +1,6 @@
 var VideoListEntryView = Backbone.View.extend({
 
   initialize: function() {
-    this.render();
 
     // select '.video-list-entry-title'
     // this.find('.video-list-entry-title').on('select', function() {

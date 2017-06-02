@@ -20,9 +20,8 @@ var VideoListView = Backbone.View.extend({
      // var referenceToNewDOM = map over exampleVideoData
         // return <div><h5><em>videoListEntry</em> view goes here</h5></div>
         // (3-collection for reference)
-    this.$el.find('h5').append(this.collection.map(function(video) {
-      var video = new Video(video);
-      return new VideoListEntryView({model: video});
+    this.$('.video-list').append(this.collection.map(function(video) {
+      return new VideoListEntryView({model: video}).render().el;
     }));
     return this;
   },
